@@ -106,7 +106,7 @@ function renderPage2() {
   const btn = container.querySelector('#move-btn');
   const moveBtnContainer = container.querySelector('#move-btn-container');
   function moveButton() {
-    if (moves < 4) {
+    if (moves < 5) {
       const maxLeft = moveBtnContainer.offsetWidth - btn.offsetWidth - 10;
       const maxTop = moveBtnContainer.offsetHeight - btn.offsetHeight - 10;
       const left = Math.random() * maxLeft;
@@ -156,20 +156,20 @@ function renderPage3() {
 
 // Page 4: Giphy embed
 function renderPage4() {
-  // Add no-horizontal-padding class for the last page
-  app.classList.add('no-horizontal-padding');
+  // Add no-horizontal-padding class for the last page if needed
+  if (typeof app !== 'undefined' && app.classList) app.classList.add('no-horizontal-padding');
   const container = document.createElement('div');
   container.innerHTML = `
     <h1 style="text-align:center;">Joyeux Anniversaire Steph ! 🎉</h1>
     <p style="text-align:center;">Voici une surprise spéciale pour toi :</p>
     <div class="giphy-embed-outer">
       <div class="giphy-embed-container" style="width:80vw;max-width:400px;margin:0 auto;">
-        <div style="width:100%;height:0;padding-bottom:100%;position:relative;max-width:400px;margin:0 auto;">
-          <iframe src="https://giphy.com/embed/wel1vvgXM2a7hRWttF" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <div style="width:100%;height:0;padding-bottom:83%;position:relative;max-width:400px;margin:0 auto;">
+          <iframe src="https://giphy.com/embed/g5R9dok94mrIvplmZd" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
         </div>
       </div>
     </div>
-    <p style="text-align:center;"><a href="https://giphy.com/gifs/happy-celebrate-birthday-wel1vvgXM2a7hRWttF">via GIPHY</a></p>
+    <p style="text-align:center;"><a href="https://giphy.com/gifs/theoffice-happy-birthday-the-office-happybirthday-g5R9dok94mrIvplmZd">via GIPHY</a></p>
   `;
   app.appendChild(container);
 }
